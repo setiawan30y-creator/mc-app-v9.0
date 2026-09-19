@@ -1,0 +1,95 @@
+/* MC-App V8.0 — App Shell / Topbar */
+
+.mc-main {
+    min-height: 100vh;
+    margin-left: 258px;
+    transition: margin-left var(--mc-transition-normal);
+}
+
+.mc-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    min-height: var(--mc-topbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 24px;
+    background: color-mix(in srgb, var(--mc-surface) 94%, transparent);
+    border-bottom: 1px solid var(--mc-border);
+    backdrop-filter: blur(14px);
+}
+
+.mc-page-heading {
+    min-width: 0;
+}
+
+.mc-page-title {
+    color: var(--mc-text);
+    font-size: 17px;
+    font-weight: 850;
+    line-height: 1.15;
+    letter-spacing: -.015em;
+}
+
+.mc-page-subtitle {
+    margin-top: 3px;
+    color: var(--mc-text-muted);
+    font-size: 11px;
+}
+
+.mc-topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.mc-theme-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 4px;
+    background: var(--mc-surface-soft);
+    border: 1px solid var(--mc-border);
+    border-radius: 10px;
+}
+
+.mc-theme-switcher button {
+    min-width: 31px;
+    height: 29px;
+    display: inline-grid;
+    place-items: center;
+    padding: 0 7px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: var(--mc-text-muted);
+    font-size: 13px;
+    transition: background-color var(--mc-transition-fast), color var(--mc-transition-fast), box-shadow var(--mc-transition-fast);
+}
+
+.mc-theme-switcher button:hover {
+    color: var(--mc-text);
+    background: var(--mc-surface);
+}
+
+.mc-theme-switcher button.is-active {
+    background: var(--mc-surface);
+    color: var(--mc-primary);
+    box-shadow: var(--mc-shadow-sm);
+}
+
+@media (max-width: 760px) {
+    .mc-main {
+        margin-left: 76px;
+    }
+
+    .mc-topbar {
+        padding: 0 15px;
+    }
+
+    .mc-page-subtitle {
+        display: none;
+    }
+}
