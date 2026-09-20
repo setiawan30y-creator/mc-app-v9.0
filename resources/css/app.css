@@ -4,6 +4,7 @@
 @import "./components/topbar.css";
 @import "./components/card.css";
 @import "./components/button.css";
+@import "./components/appearance.css";
 
 *,
 *::before,
