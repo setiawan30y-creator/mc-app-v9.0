@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="system">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="system" data-accent="gold" data-background="warm" data-card="elevated" data-radius="soft" data-density="comfortable">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title ?? 'MC-App V8.0' }}</title>
+    <title>{{ $title ?? 'MC-App V9.0' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
