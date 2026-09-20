@@ -5,31 +5,17 @@
     justify-content: center;
     gap: 8px;
     padding: 0 14px;
-    border: 1px solid transparent;
+    border: var(--mc-border-width, 1px) solid var(--mc-button-border, transparent);
     border-radius: var(--mc-radius-md);
+    background: var(--mc-button-bg, var(--mc-primary));
+    color: var(--mc-button-text, #fff);
     font-weight: 700;
-    transition: transform var(--mc-transition-fast), background-color var(--mc-transition-fast), border-color var(--mc-transition-fast);
+    box-shadow: var(--mc-shadow-sm);
+    transition: transform var(--mc-transition-fast), background-color var(--mc-transition-fast), border-color var(--mc-transition-fast), box-shadow var(--mc-transition-fast), color var(--mc-transition-fast);
 }
 
-.mc-btn:active {
-    transform: translateY(1px);
-}
-
-.mc-btn-primary {
-    background: var(--mc-primary);
-    color: white;
-}
-
-.mc-btn-primary:hover {
-    background: var(--mc-primary-hover);
-}
-
-.mc-btn-ghost {
-    background: transparent;
-    color: var(--mc-text-secondary);
-    border-color: var(--mc-border);
-}
-
-.mc-btn-ghost:hover {
-    background: var(--mc-surface-soft);
-}
+.mc-btn:active { transform: translateY(1px); }
+.mc-btn-primary { background: var(--mc-button-bg, var(--mc-primary)); color: var(--mc-button-text, #fff); border-color: var(--mc-button-border, transparent); }
+.mc-btn-primary:hover { background: var(--mc-accent-hover, var(--mc-primary-hover)); }
+.mc-btn-ghost { background: transparent; color: var(--mc-text-secondary); border-color: var(--mc-border); box-shadow: none; }
+.mc-btn-ghost:hover { background: var(--mc-surface-soft); color: var(--mc-text); }
