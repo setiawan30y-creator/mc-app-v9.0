@@ -57,3 +57,101 @@
     --mc-transition-normal: 200ms ease;
     --mc-transition-slow: 300ms ease;
 }
+
+html[data-accent="emerald"] {
+    --mc-accent: #19735f;
+    --mc-accent-hover: #155f50;
+    --mc-accent-soft: #e5f3ee;
+}
+
+html[data-accent="gold"] {
+    --mc-accent: #bc903d;
+    --mc-accent-hover: #a77d32;
+    --mc-accent-soft: #f7edcf;
+}
+
+html[data-accent="blue"] {
+    --mc-accent: #2f6f9f;
+    --mc-accent-hover: #285f89;
+    --mc-accent-soft: #e7f0f7;
+}
+
+html[data-accent="violet"] {
+    --mc-accent: #7356a8;
+    --mc-accent-hover: #624991;
+    --mc-accent-soft: #eee9f7;
+}
+
+html[data-accent="red"] {
+    --mc-accent: #ad4a45;
+    --mc-accent-hover: #933d39;
+    --mc-accent-soft: #f8e9e7;
+}
+
+html[data-background="warm"] {
+    --mc-background: #f7f5ef;
+    --mc-surface-soft: #fbfbf8;
+}
+
+html[data-background="cool"] {
+    --mc-background: #f2f5f7;
+    --mc-surface-soft: #f8fafb;
+}
+
+html[data-background="clean"] {
+    --mc-background: #f8f9fa;
+    --mc-surface-soft: #ffffff;
+}
+
+html[data-card="flat"] {
+    --mc-shadow-sm: none;
+    --mc-shadow-md: none;
+    --mc-shadow-lg: none;
+}
+
+html[data-card="elevated"] {
+    --mc-shadow-sm: 0 2px 6px rgba(25, 43, 36, .06);
+    --mc-shadow-md: 0 8px 24px rgba(25, 43, 36, .08);
+    --mc-shadow-lg: 0 14px 36px rgba(25, 43, 36, .12);
+}
+
+html[data-card="soft"] {
+    --mc-shadow-sm: 0 3px 10px rgba(25, 43, 36, .08);
+    --mc-shadow-md: 0 12px 28px rgba(25, 43, 36, .11);
+    --mc-shadow-lg: 0 18px 44px rgba(25, 43, 36, .14);
+}
+
+html[data-radius="sharp"] {
+    --mc-radius-sm: 3px;
+    --mc-radius-md: 5px;
+    --mc-radius-lg: 7px;
+    --mc-radius-xl: 10px;
+}
+
+html[data-radius="soft"] {
+    --mc-radius-sm: 5px;
+    --mc-radius-md: 8px;
+    --mc-radius-lg: 12px;
+    --mc-radius-xl: 16px;
+}
+
+html[data-radius="round"] {
+    --mc-radius-sm: 8px;
+    --mc-radius-md: 12px;
+    --mc-radius-lg: 18px;
+    --mc-radius-xl: 24px;
+}
+
+html[data-density="compact"] {
+    --mc-space-3: 10px;
+    --mc-space-4: 12px;
+    --mc-space-5: 16px;
+    --mc-space-6: 20px;
+}
+
+html[data-density="comfortable"] {
+    --mc-space-3: 12px;
+    --mc-space-4: 16px;
+    --mc-space-5: 20px;
+    --mc-space-6: 24px;
+}
