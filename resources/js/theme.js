@@ -65,7 +65,6 @@ export function setAppearance(key, value) {
 }
 
 export function resetAppearance() {
-    Object.entries(DEFAULTS).forEach(([key, value]) => writeSetting(key, value));
     applyAppearance(DEFAULTS);
 }
 
@@ -80,5 +79,3 @@ export function initTheme() {
 
     document.querySelector('[data-appearance-reset]')?.addEventListener('click', resetAppearance);
 }
-
-document.addEventListener('DOMContentLoaded', initTheme);
