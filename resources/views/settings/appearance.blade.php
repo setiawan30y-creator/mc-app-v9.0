@@ -20,7 +20,21 @@
                     @foreach($group['items'] as $item)<button type="button" class="mc-choice" data-appearance-choice="{{ $group['key'] }}" data-value="{{ $item[0] }}" aria-pressed="false">@if($item[1])<span class="mc-choice-icon">{{ $item[1] }}</span>@endif<span class="mc-choice-label">{{ $item[2] }}</span><span class="mc-choice-help">{{ $item[3] }}</span></button>@endforeach
                 </div></div>
             @endforeach
-            <div class="mc-appearance-section"><h2 class="mc-appearance-section-title">Accent color</h2><p class="mc-appearance-section-help">Warna aksen untuk tombol aktif, indikator, link, dan elemen interaktif.</p><div class="mc-swatch-row"><button type="button" class="mc-color-choice" style="--swatch:#19735f" data-appearance-choice="accent" data-value="emerald" aria-label="Emerald"></button><button type="button" class="mc-color-choice" style="--swatch:#bc903d" data-appearance-choice="accent" data-value="gold" aria-label="Gold"></button><button type="button" class="mc-color-choice" style="--swatch:#2f6f9f" data-appearance-choice="accent" data-value="blue" aria-label="Blue"></button><button type="button" class="mc-color-choice" style="--swatch:#7356a8" data-appearance-choice="accent" data-value="violet" aria-label="Violet"></button><button type="button" class="mc-color-choice" style="--swatch:#ad4a45" data-appearance-choice="accent" data-value="red" aria-label="Red"></button></div></div>
+
+            <div class="mc-appearance-section">
+                <h2 class="mc-appearance-section-title">Accent color</h2>
+                <p class="mc-appearance-section-help">Pilih keluarga warna, lalu tentukan tingkat terang sampai gelap.</p>
+                <div class="mc-color-family-grid">
+                    @php($colors=[
+                        ['green','#16a34a','Green'],['emerald','#19735f','Emerald'],['blue','#2563eb','Blue'],['violet','#7c3aed','Violet'],['gold','#bc903d','Gold'],['orange','#ea580c','Orange'],['red','#dc2626','Red'],['pink','#db2777','Pink'],['cyan','#0891b2','Cyan'],['slate','#475569','Slate']
+                    ])
+                    @foreach($colors as $color)<button type="button" class="mc-color-family" data-appearance-choice="accent" data-value="{{ $color[0] }}" aria-pressed="false"><span class="mc-color-dot" style="--swatch:{{ $color[1] }}"></span><span>{{ $color[2] }}</span></button>@endforeach
+                </div>
+                <div class="mc-shade-title"><span>Shade</span><span class="mc-shade-hint">100 terang → 900 gelap</span></div>
+                <div class="mc-shade-grid">
+                    @foreach([100,200,300,400,500,600,700,800,900] as $shade)<button type="button" class="mc-shade" data-appearance-shade data-value="{{ $shade }}" aria-pressed="false"><span class="mc-shade-swatch"></span><strong>{{ $shade }}</strong></button>@endforeach
+                </div>
+            </div>
         </div>
         <div class="mc-live-preview"><div class="mc-live-preview-head"><strong>Live Preview</strong><span>Preview berubah langsung saat pilihan diganti.</span></div><div class="mc-preview-frame"><aside class="mc-preview-sidebar"><div class="mc-preview-brand">MC-APP V9.0</div><div class="mc-preview-nav"><span class="active">Dashboard</span><span>Teller</span><span>Transaction</span><span>Closing Rp</span></div></aside><div class="mc-preview-content"><div class="mc-preview-topbar"></div><div class="mc-preview-label">DASHBOARD</div><div class="mc-preview-card"><strong>USD Stock</strong><div class="mc-preview-line"></div><button class="mc-preview-button">Open transaction</button></div><div class="mc-preview-meta"><div>Today Sales<br><strong>Rp 12.450.000</strong></div><div>Customers<br><strong>28</strong></div></div></div></div></div>
     </div>
