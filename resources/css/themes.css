@@ -18,6 +18,26 @@
     --mc-shadow-lg: 0 18px 42px rgba(0, 0, 0, .36);
 }
 
+[data-theme="dark"][data-accent="emerald"] {
+    --mc-accent-soft: #15382f;
+}
+
+[data-theme="dark"][data-accent="gold"] {
+    --mc-accent-soft: #3b301b;
+}
+
+[data-theme="dark"][data-accent="blue"] {
+    --mc-accent-soft: #18354a;
+}
+
+[data-theme="dark"][data-accent="violet"] {
+    --mc-accent-soft: #302446;
+}
+
+[data-theme="dark"][data-accent="red"] {
+    --mc-accent-soft: #472624;
+}
+
 @media (prefers-color-scheme: dark) {
     [data-theme="system"] {
         --mc-background: #0b1714;
@@ -32,5 +52,21 @@
         --mc-primary-soft: #183b33;
         --mc-accent-soft: #3b301b;
         --mc-shadow-md: 0 10px 30px rgba(0, 0, 0, .28);
+    }
+
+    [data-theme="system"][data-accent="emerald"] {
+        --mc-accent-soft: #15382f;
+    }
+
+    [data-theme="system"][data-accent="blue"] {
+        --mc-accent-soft: #18354a;
+    }
+
+    [data-theme="system"][data-accent="violet"] {
+        --mc-accent-soft: #302446;
+    }
+
+    [data-theme="system"][data-accent="red"] {
+        --mc-accent-soft: #472624;
     }
 }
